@@ -24,7 +24,7 @@ public class TouchScreen : MonoBehaviour
 		}
 		else if (Input.touchCount == 0)
 		{
-			
+			//Возможно нужна будет обработка
 		}
 	}
 
@@ -102,12 +102,14 @@ public class TouchScreen : MonoBehaviour
 			if (touchPathLength < movePorog)
 				Network.sender.Send(new Message((byte)Command.RightClick).Build());
 			touchPathLength = 0;
-		}	}
+		}
+	}
 
 	private void HandleEscapeButton()
 	{
 		if (Input.GetKey(KeyCode.Escape))
 		{
 			UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
-		}	}
+		}
+	}
 }
